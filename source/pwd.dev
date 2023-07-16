@@ -23,7 +23,7 @@ OverrideOutputName=pwd.exe
 HostApplication=
 UseCustomMakefile=0
 CustomMakefile=
-CommandLine=version
+CommandLine=help
 Folders=
 IncludeVersionInfo=1
 SupportXPThemes=0
@@ -60,18 +60,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit2]
-FileName=attr.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit3]
-FileName=attr.h
+FileName=version.cpp
 CompileCpp=1
 Folder=
 Compile=1
@@ -81,7 +71,7 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit4]
-FileName=version.h
+FileName=help.h
 CompileCpp=1
 Folder=
 Compile=1
@@ -91,7 +81,17 @@ OverrideBuildCmd=0
 BuildCmd=
 
 [Unit5]
-FileName=version.cpp
+FileName=help.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit2]
+FileName=version.h
 CompileCpp=1
 Folder=
 Compile=1
