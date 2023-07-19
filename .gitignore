@@ -33,3 +33,8 @@
 
 # Others
 *.res
+
+# Dev C++ Files
+*.win
+*.layout
+*.rc

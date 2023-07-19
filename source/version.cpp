@@ -1,7 +1,7 @@
 #include <iostream>
 #include "version.h"
 
-void print_version()
+void ver::print_version()
 {
-	std::cout << "pwd version 1.0.0.0" << std::endl;
+	std::cout << "pwd version 1.0.0.1" << std::endl;
 }
