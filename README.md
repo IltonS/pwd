@@ -31,3 +31,11 @@ $ pwd generate --fort-knox
 **length** Specify the length of the password, between 4 and 16.
    
 **--fort-knox** Shortcut for ```-l 16 -uds```
+
+**Strength**
+
+```bash
+$ pwd strength <password>
+```
+
+**password**  A password to determine how strong it is.

@@ -13,6 +13,7 @@
 #include "version.h"
 #include "help.h"
 #include "generate.h"
+#include "strength.h"
 
 int main(int argc, char** argv) {
 	
@@ -25,33 +26,34 @@ int main(int argc, char** argv) {
 		exit(1);
 	}
 	
-	// Loop through the arguments and parse them according to their flags
-	for (int i = 1; i < argc; i++) {
-		// Check if it is a flag for version
-		if ( (strcmp(argv[i], "version") == 0) || (strcmp(argv[i], "-v") == 0) || (strcmp(argv[i], "--version") == 0) ) {
-			ver::print_version();			
-			exit(0);
-		}
-		
-		// Check if it is a flag for help
-		if ( (strcmp(argv[i], "help") == 0) || (strcmp(argv[i], "-h") == 0) || (strcmp(argv[i], "--help") == 0) ) {
-			hlp::print_help();	
-			exit(0);
-		}
-		
-		// Check for generate command
-		if (strcmp(argv[i], "generate") == 0) {
-			gen::generate_main(argc, argv);
-		}
-		else {
-			// Otherwise, it is an invalid flag
-			std::cerr << "Invalid command: " << argv[i] << std::endl << std::endl;
-			
-			hlp::print_usage();
-			
-			exit(1);	
-		}
+	// Check if it is a flag for version
+	if ( (strcmp(argv[1], "version") == 0) || (strcmp(argv[1], "-v") == 0) || (strcmp(argv[1], "--version") == 0) ) {
+		ver::print_version();			
+		exit(0);
 	}
+	
+	// Check if it is a flag for help
+	if ( (strcmp(argv[1], "help") == 0) || (strcmp(argv[1], "-h") == 0) || (strcmp(argv[1], "--help") == 0) ) {
+		hlp::print_help();	
+		exit(0);
+	}
+	
+	// Check for generate command
+	if (strcmp(argv[1], "generate") == 0) {
+		gen::generate_main(argc, argv);
+	}
+	
+	// Check for determine strength command
+	if (strcmp(argv[1], "strength") == 0) {
+		stgh::strength_main(argc, argv);
+	}
+	
+	// Otherwise, it is an invalid flag
+	std::cerr << "Invalid command: " << argv[1] << std::endl << std::endl;
+	
+	hlp::print_usage();
+	
+	exit(1);
 	
 	return 0;
 }

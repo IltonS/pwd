@@ -24,6 +24,11 @@ Commands:
    <length> Specify the length of the password, between 4 and 16.
    
    --fort-knox Shortcut for -l 16 -uds
+   
+   
+   strength <password>
+   
+   <passowd> A password to determine how strong it is.
 )";
 
 // Print the program commands
